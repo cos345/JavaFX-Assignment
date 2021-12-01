@@ -27,4 +27,12 @@ public class InputTest {
         assertTrue(u1.checkDigit());
         assertFalse(u2.checkDigit());
     }
+
+    @Test
+    public void TestLetter() {
+        User u1 = new User("sample", "abc");
+        User u2 = new User("sample", "1234");
+        assertTrue(u1.checkLetter());
+        assertFalse(u2.checkLetter());
+    }
 }
