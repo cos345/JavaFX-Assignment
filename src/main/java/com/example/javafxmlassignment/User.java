@@ -40,4 +40,10 @@ public class User {
         Matcher matcher = digits.matcher(this.password);
         return matcher.find();
     }
+
+    public boolean checkCharacters(){
+        final Pattern digits = Pattern.compile("[*^&@!]");
+        Matcher matcher = digits.matcher(this.password);
+        return matcher.find();
+    }
 }
