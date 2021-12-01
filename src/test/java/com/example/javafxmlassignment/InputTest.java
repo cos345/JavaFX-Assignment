@@ -35,4 +35,12 @@ public class InputTest {
         assertTrue(u1.checkLetter());
         assertFalse(u2.checkLetter());
     }
+
+    @Test
+    public void Testcharacters(){
+        User u1 = new User("sample", "!works");
+        User u2 = new User("sample", "doesnotwork");
+        assertTrue(u1.checkCharacters());
+        assertFalse(u2.checkCharacters());
+    }
 }
