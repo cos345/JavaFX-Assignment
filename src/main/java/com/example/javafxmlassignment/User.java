@@ -46,4 +46,8 @@ public class User {
         Matcher matcher = digits.matcher(this.password);
         return matcher.find();
     }
+
+    public boolean checkPassword(){
+        return this.checkLength() & this.checkDigit() & this.checkLetter() & this.checkCharacters();
+    }
 }
