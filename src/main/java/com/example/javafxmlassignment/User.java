@@ -24,4 +24,8 @@ public class User {
         Matcher matcher = VALID_EMAIL_REGEX.matcher(this.email);
         return matcher.find();
     }
+
+    public boolean checkLength(){
+        return this.password.length() >= 7;
+    }
 }
