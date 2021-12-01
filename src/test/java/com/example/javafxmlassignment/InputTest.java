@@ -20,4 +20,10 @@ public class InputTest {
         assertTrue(u1.checkLength());
         assertFalse(u2.checkLength());
     }
+    public void TestDigit() {
+        User u1 = new User("sample", "abc123");
+        User u2 = new User("sample", "nodigit");
+        assertTrue(u1.checkDigit());
+        assertFalse(u2.checkDigit());
+    }
 }
