@@ -13,4 +13,11 @@ public class InputTest {
         assertTrue(u1.checkEmail());
         assertFalse(u2.checkEmail());
     }
+    @Test
+    public void TestLength() {
+        User u1 = new User("sample", "thisislongenough");
+        User u2 = new User("sample", "short");
+        assertTrue(u1.checkLength());
+        assertFalse(u2.checkLength());
+    }
 }
