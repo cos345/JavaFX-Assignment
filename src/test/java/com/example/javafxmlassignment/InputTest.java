@@ -8,7 +8,9 @@ import org.junit.jupiter.api.Test;
 public class InputTest {
     @Test
     public void TestEmail() {
-        assertTrue(User.checkEmail("abc123@xyz.com"));
-        assertFalse(User.checkEmail("thisisnotanemail"));
+        User u1 = new User("abc123@xyz.com", "pw");
+        User u2 = new User("thisisnotanemail", "pw");
+        assertTrue(u1.checkEmail());
+        assertFalse(u2.checkEmail());
     }
 }

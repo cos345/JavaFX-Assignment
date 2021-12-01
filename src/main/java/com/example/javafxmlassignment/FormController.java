@@ -22,7 +22,11 @@ public class FormController {
     public Label responseLabel;
     public void register() {
         User user = new User(emailField.getText(), passwordField.getText());
-        responseLabel.setText("User registered successfully");
-
+        if(user.checkEmail()) {
+            responseLabel.setText("User registered successfully");
+        }
+        else{
+            responseLabel.setText("Please enter a valid email");
+            }
     }
 }
