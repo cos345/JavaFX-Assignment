@@ -34,4 +34,10 @@ public class User {
         Matcher matcher = digits.matcher(this.password);
         return matcher.find();
     }
+
+    public boolean checkLetter(){
+        final Pattern digits = Pattern.compile("[a-zA-Z]");
+        Matcher matcher = digits.matcher(this.password);
+        return matcher.find();
+    }
 }
