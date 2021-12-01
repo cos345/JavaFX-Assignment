@@ -28,4 +28,10 @@ public class User {
     public boolean checkLength(){
         return this.password.length() >= 7;
     }
+
+    public boolean checkDigit(){
+        final Pattern digits = Pattern.compile("[\\d]");
+        Matcher matcher = digits.matcher(this.password);
+        return matcher.find();
+    }
 }
