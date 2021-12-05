@@ -36,14 +36,14 @@ public class User {
     }
 
     public boolean checkLetter(){
-        final Pattern digits = Pattern.compile("[a-zA-Z]");
-        Matcher matcher = digits.matcher(this.password);
+        final Pattern letters = Pattern.compile("[a-zA-Z]");
+        Matcher matcher = letters.matcher(this.password);
         return matcher.find();
     }
 
     public boolean checkCharacters(){
-        final Pattern digits = Pattern.compile("[*^&@!]");
-        Matcher matcher = digits.matcher(this.password);
+        final Pattern characters = Pattern.compile("[*^&@!]");
+        Matcher matcher = characters.matcher(this.password);
         return matcher.find();
     }
 

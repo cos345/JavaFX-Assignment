@@ -37,7 +37,7 @@ public class InputTest {
     }
 
     @Test
-    public void Testcharacters(){
+    public void TestCharacters(){
         User u1 = new User("sample", "!works");
         User u2 = new User("sample", "doesnotwork");
         assertTrue(u1.checkCharacters());
